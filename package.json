@@ -1,0 +1,27 @@
+{
+  "name": "@heerey525/utils",
+  "version": "1.0.0",
+  "description": "常用的js前端工具库",
+  "main": "dist/hl-utils.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heerey525/utils.git"
+  },
+  "keywords": [
+    "rollup",
+    "toolkit"
+  ],
+  "author": "https://github.com/heerey525",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heerey525/utils/issues"
+  },
+  "homepage": "https://github.com/heerey525/utils#readme",
+  "devDependencies": {
+    "rollup": "^2.70.1"
+  }
+}
