@@ -1,7 +1,5 @@
-const add = (a, b) => {
-  return a + b
-}
+import time from './time/index.js'
 
 export default {
-  add
+  time
 }
