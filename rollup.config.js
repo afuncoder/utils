@@ -1,4 +1,7 @@
 import babel from '@rollup/plugin-babel'
+import alias from '@rollup/plugin-alias'
+const path = require('path')
+const resolveDir = dir => path.join(__dirname, dir)
 
 export default {
   input: 'src/index.js', // 要打包的文件源路径（应用程序的主要入口点）
@@ -9,5 +12,10 @@ export default {
   },
   plugins: [
     babel({ babelHelpers: 'bundled' }),
+    alias({
+      entries: [
+        { find: '@', replacement: resolveDir('src') }
+      ]
+    })
   ]
 }

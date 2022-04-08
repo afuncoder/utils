@@ -1,4 +1,4 @@
-import time from './time/index.js'
+import time from '@/time/index.js'
 
 export default {
   time
