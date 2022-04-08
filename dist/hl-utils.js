@@ -9,39 +9,41 @@
    * @param {String|Number} i eg. 1
    * @return {String} '01'
    */
-  const spliceZero = (i) => {
+  var spliceZero = function spliceZero(i) {
     if (i.toString().length === 1) {
       i = '0' + i;
     } else {
       i = i + '';
     }
-    return i
-  };
 
+    return i;
+  };
   /**
-   * @description:时间戳转日期格式
-   * @param {Number} date eg. 1649321280333
-   * @return {String} '2022-04-07 16:48:00'
+   * @description:格式化日期
+   * @param {String|Number} date 时间戳或者日期，建议使用时间戳 eg. 1649321280333
+   * @param {String} join 年月日连接符 eg. /
+   * @return {String} '2022/04/07 16:48:00'
    */
-  // 获取当前日期yy-mm-dd
-  // date 为时间对象
-  const format = (date, join='-') => {
-    const dt = date || new Date();
-    const year = dt.getFullYear();
-    const month = spliceZero(dt.getMonth() + 1);
-    const day = spliceZero(dt.getDate());
-    const hour = spliceZero(dt.getHours());
-    const minute = spliceZero(dt.getMinutes());
-    const second = spliceZero(dt.getSeconds());
-    return `${year}${join}${month}${join}${day} ${hour}:${minute}:${second}`
+
+
+  var format = function format(date) {
+    var join = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '-';
+    var dt = date ? new Date(date) : new Date();
+    var year = dt.getFullYear();
+    var month = spliceZero(dt.getMonth() + 1);
+    var day = spliceZero(dt.getDate());
+    var hour = spliceZero(dt.getHours());
+    var minute = spliceZero(dt.getMinutes());
+    var second = spliceZero(dt.getSeconds());
+    return "".concat(year).concat(join).concat(month).concat(join).concat(day, " ").concat(hour, ":").concat(minute, ":").concat(second);
   };
 
   var time = {
-    format
+    format: format
   };
 
   var index = {
-    time
+    time: time
   };
 
   return index;

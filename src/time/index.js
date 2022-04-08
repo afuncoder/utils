@@ -18,7 +18,7 @@ const spliceZero = (i) => {
  * @param {String} join 年月日连接符 eg. /
  * @return {String} '2022/04/07 16:48:00'
  */
-const format = ({date, join='-'}) => {
+const format = (date, join='-') => {
   const dt = date ? new Date(date) : new Date()
   const year = dt.getFullYear()
   const month = spliceZero(dt.getMonth() + 1)
