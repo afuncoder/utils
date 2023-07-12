@@ -691,6 +691,7 @@
 
   var email_reg = "lsdjeloqewoqej";      
   var http_reg = "(http|https)//:w+/";
+  var date_format_reg = "\d{4}-\d{4}";
 
   var index = {
     time: time,
