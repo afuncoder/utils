@@ -689,7 +689,8 @@
     idCard: idCard
   };
 
-  var email_reg = "lsdjeloqewoqej";                       
+  var email_reg = "lsdjeloqewoqej";      
+  var http_reg = "(http|https)//:w+/";
 
   var index = {
     time: time,
