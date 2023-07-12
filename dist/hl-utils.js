@@ -689,6 +689,8 @@
     idCard: idCard
   };
 
+  var email_reg = "lsdjeloqewoqej";                       
+
   var index = {
     time: time,
     arr: arr,
